@@ -1,10 +1,10 @@
 .header {
   max-width: 880px;
   min-height: 74px;
-  margin: 0 auto 36px;
+  margin: 0 auto;
   padding-top: 45px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }

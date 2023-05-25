@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PopupWithForm({name, title, isOpen, onClose, children, onSubmit, buttonText}) {
+function PopupWithForm({ name, title, isOpen, onClose, children, onSubmit, buttonText} ) {
   return (      
       <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}> 
         <div className='popup__container'>
@@ -22,7 +22,8 @@ function PopupWithForm({name, title, isOpen, onClose, children, onSubmit, button
             onClick={onClose}
             className='popup__close-button opacity'
             aria-label='закрыть'
-            type='button'></button>
+            type='button' 
+          />
         </div>
       </div>
   );

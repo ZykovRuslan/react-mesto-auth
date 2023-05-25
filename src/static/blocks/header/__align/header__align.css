@@ -1,0 +1,5 @@
+@media screen and (max-width: 620px) {
+  .header__align {
+    margin: 0 auto;
+  }
+}

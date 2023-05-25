@@ -31,22 +31,21 @@ function App() {
   const [message, setMessage] = useState({ path: '', text: '' });
 
   useEffect(() => {
+    if (!isLoggedIn) return;
     api
       .getUserInfo()
       .then((data) => {
         setCurrentUser(data);
       })
       .catch((err) => console.log(err));
-  }, []);
 
-  useEffect(() => {
     api
       .getInitialCards()
       .then((res) => {
-        setCards([...res]);
+        setCards(res);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [isLoggedIn]);
 
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
@@ -158,7 +157,7 @@ function App() {
       }
     }
     checkAuth();
-  }, [isLoggedIn]);
+  }, []);
 
   function onSignOut() {
     localStorage.removeItem('JWT');
